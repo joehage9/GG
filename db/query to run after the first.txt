@@ -1,0 +1,72 @@
+/** Object:  StoredProcedure [dbo].[GetInvoicePrice]    Script Date: 04/05/2019 11:52:38 AM **/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetInvoicePrice] @customer int, @start decimal(18, 2), @end decimal(18, 2), @date date
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	DECLARE @kwh decimal(18, 2) = (SELECT TOP 1 [KwhPrice] FROM [Tarrifs] WHERE @date >= [Date] ORDER BY [Tarrifs].[Date] DESC);
+	DECLARE @amp decimal(18, 2) = (SELECT TOP 1 [Value] FROM [AmpereTypes] INNER JOIN Customer ON [Amperes] = [Customer].[AmpereNumber] WHERE [Customer].[ID] = @customer);
+
+	SELECT @amp + ((@end - @start) * @kwh)
+END
+GO
+
+/** Object:  StoredProcedure [dbo].[GetInvoices]    Script Date: 04/05/2019 11:52:34 AM **/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetInvoices] @customer int
+AS
+BEGIN	
+	SET NOCOUNT ON;
+
+	SELECT dbo.Invoices.ID
+		 , dbo.Invoices.StartingCounter
+		 , dbo.Invoices.EndingCounter
+		 , dbo.Invoices.Date
+		 , dbo.Invoices.CustomerID
+		 , dbo.Invoices.ExtraCost
+		 , dbo.Invoices.ExtraInfo
+		 , CustDivision = dbo.Customer.Division
+		 , CustAmpPrice = dbo.AmpereTypes.Value
+		 , CustAmp = dbo.Customer.AmpereNumber
+		 , KWhPrice = (SELECT TOP 1 [Tarrifs].[KwhPrice] FROM [Tarrifs] WHERE [Invoices].[Date] >= [Tarrifs].[Date] ORDER BY [Tarrifs].[Date] DESC)
+	FROM  dbo.Invoices
+		  INNER JOIN dbo.Customer ON  dbo.Customer.ID = dbo.Invoices.CustomerID
+	      INNER JOIN dbo.AmpereTypes ON dbo.AmpereTypes.Amperes = dbo.Customer.AmpereNumber 
+	WHERE @customer	= -1 OR (@customer = dbo.Invoices.CustomerID AND dbo.Customer.Active = 1)
+END
+GO
+
+/** Object:  StoredProcedure [dbo].[GetInvoicesPrint]    Script Date: 04/05/2019 11:52:23 AM **/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetInvoicesPrint] @ids nvarchar(MAX)
+AS
+BEGIN	
+	SET NOCOUNT ON;
+	SET @ids = ',' + @ids + ',';
+
+	SELECT dbo.Invoices.ID
+		 , dbo.Invoices.StartingCounter
+		 , dbo.Invoices.EndingCounter
+		 , dbo.Invoices.Date
+		 , dbo.Invoices.ExtraCost
+		 , dbo.Invoices.ExtraInfo
+		 , CustAddress = dbo.Customer.Address
+		 , CustName = dbo.Customer.FirstName + ' ' + dbo.Customer.LastName
+		 , CustAmpPrice = dbo.AmpereTypes.Value
+		 , CustAmp = dbo.Customer.AmpereNumber
+		 , KWhPrice = (SELECT TOP 1 [Tarrifs].[KwhPrice] FROM [Tarrifs] WHERE [Invoices].[Date] >= [Tarrifs].[Date] ORDER BY [Tarrifs].[Date] DESC)
+	FROM  dbo.Invoices
+		  INNER JOIN dbo.Customer ON  dbo.Customer.ID = dbo.Invoices.CustomerID
+	      INNER JOIN dbo.AmpereTypes ON dbo.AmpereTypes.Amperes = dbo.Customer.AmpereNumber 
+	WHERE @ids LIKE '%,' + CAST(dbo.Invoices.ID AS nvarchar)+',%'
+END
