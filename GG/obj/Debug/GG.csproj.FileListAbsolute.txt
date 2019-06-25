@@ -133,3 +133,34 @@ C:\Users\joeha\Desktop\ghssoub-gen-master\GG\bin\Debug\Extensions.pdb
 C:\Users\joeha\Desktop\ghssoub-gen-master\GG\bin\Debug\SlickControls.pdb
 C:\Users\joeha\Desktop\ghssoub-gen-master\GG\bin\Debug\Newtonsoft.Json.xml
 C:\Users\joeha\Desktop\ghssoub-gen-master\GG\obj\Debug\GG.csproj.CopyComplete
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\GG.exe.config
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\GG.exe.manifest
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\GG.application
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\GG.exe
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\GG.pdb
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\Newtonsoft.Json.dll
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\Extensions.pdb
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\SlickControls.pdb
+C:\Users\joe hage\Desktop\c#\GG\GG\bin\Debug\Newtonsoft.Json.xml
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.csprojAssemblyReference.cache
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.csproj.ResolveComReference.cache
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.Customers.PC_ViewCustomers.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.PC_NewInvoice.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.PC_AddCustomer.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.Invoices.PC_BulkCreate.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.Invoices.PC_ReportViewer.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.Invoices.PC_ViewInvoices.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.Main.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.Properties.Resources.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.Tariffs.PC_Tarrifs.resources
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.csproj.GenerateResource.cache
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.csproj.CoreCompileInputs.cache
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.exe.manifest
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.application
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.csproj.CopyComplete
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.exe
+C:\Users\joe hage\Desktop\c#\GG\GG\obj\Debug\GG.pdb

@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="GG.exe.manifest" size="8266">
+    <dependentAssembly dependencyType="install" codebase="GG.exe.manifest" size="8264">
       <assemblyIdentity name="GG.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/bfkTGpRIAHtgJFvfAIbEeR+QVUxDwkNsE9Rl5Y9z8Y=</dsig:DigestValue>
+        <dsig:DigestValue>H6kCWaHD4CR/YJi9gRYSXOJjop3lB3J8U0Z3+gis0D4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
